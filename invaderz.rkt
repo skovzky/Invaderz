@@ -26,6 +26,8 @@
 ;==============================================================================
 ;Function Definitions
 
+     ;Check-Expects
+
      ; A ShotWorld is List-of-numbers.
      ; interp.: the collection of shots fired and moving straight up
  
