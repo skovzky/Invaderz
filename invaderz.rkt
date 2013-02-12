@@ -28,10 +28,16 @@
 
      ;Check-Expects
           ;check-expect tock
+(check-expect (tock empty) empty)
+(check-expect (tock (cons 1 empty)) (cons (sub1 (first (cons 1 empty))) (tock (rest (cons 1 empty)))))
 
           ;check-expect keyh
+(check-expect (keyh empty " ") (cons HEIGHT empty))
+(check-expect (keyh (cons 1 empty) " ") (cons HEIGHT (cons 1 empty)))
 
           ;check-expect to-image
+(check-expect (to-image empty) BACKGROUND)
+(check-expect (to-image (cons 1 empty)) (place-image  SHOT XSHOTS (first (cons 1 empty))(to-image (rest (cons 1 empty)))))
 
 
      ; A ShotWorld is List-of-numbers.
