@@ -19,7 +19,7 @@
 ;==============================================================================
 ;Graphical Constants
 (define BACKGROUND (empty-scene WIDTH HEIGHT))
-(define SHOT (triangle 5 "solid" "red"))
+(define SHOT (triangle 3 "solid" "red"))
  
 
 
@@ -27,12 +27,6 @@
 ;Function Definitions
 
      ;Check-Expects
-          ;check-expect tock
-
-          ;check-expect keyh
-
-          ;check-expect to-image
-
 
      ; A ShotWorld is List-of-numbers.
      ; interp.: the collection of shots fired and moving straight up
