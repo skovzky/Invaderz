@@ -30,6 +30,10 @@
           ;check-expect tock
 (check-expect (tock empty) empty)
 (check-expect (tock (cons 1 empty)) (cons (sub1 (first (cons 1 empty))) (tock (rest (cons 1 empty)))))
+<<<<<<< HEAD
+=======
+(check-expect (tock (cons -1 empty)) (tock (rest (cons -1 empty))))
+>>>>>>> done
 
           ;check-expect keyh
 (check-expect (keyh empty " ") (cons HEIGHT empty))
@@ -48,6 +52,7 @@
 (define (tock w)
   (cond
     [(empty? w) empty]
+    [(<=(first w) 0) (tock (rest w))]
     [else (cons (sub1 (first w)) (tock (rest w)))]))
  
      ; ShotWorld KeyEvent -> ShotWorld
